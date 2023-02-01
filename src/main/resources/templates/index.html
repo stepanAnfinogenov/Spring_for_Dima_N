@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<body>
+
+<h3>List of employees</h3>
+
+<table class="centered">
+    <tread>
+        <tr>
+            <th>Name    </th>
+            <th>Surname    </th>
+            <th>Department    </th>
+            <th>Salary    </th>
+        </tr>
+    </tread>
+
+    <tbody>
+    <tr th:each="employee: ${employees}">
+        <td th:text="${employee.name}"/>
+        <td th:text="${employee.surname}"/>
+        <td th:text="${employee.department}"/>
+        <td th:text="${employee.salary}"/>
+    </tr>
+    </tbody>
+
+</table>
+
+</body>
+</html>
